@@ -4,6 +4,7 @@
   },
   "globals": {
     "it": true,
+    "assert": true,
     "describe": true,
     "expect": true,
     "sinon": true,
