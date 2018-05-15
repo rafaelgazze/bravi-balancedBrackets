@@ -9,7 +9,8 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint index.js --ext .js --ext .json --fix",
-    "cover": "nyc npm test"
+    "cover": "nyc npm test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
