@@ -1,34 +1,29 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
+const isValid = (brackets) => {
+  if (brackets.length <= 1) { return false }
 
-function isValid(str) {
+  let matchingOpeningBracket, ch
+  let stack = []
 
-    if (str.length <= 1)
-      return false
-  
-    let matchingOpeningBracket, ch
-    let stack = []
-  
-    let openingBrackets = ['[', '{', '(']
-    let closingBrackets = [']', '}', ')']
-  
-    for (let i = 0; i < str.length; i++) {
-      ch = str[i]
-  
-      if (closingBrackets.indexOf(ch) > -1) {
-        matchingOpeningBracket = openingBrackets[closingBrackets.indexOf(ch)]
-        if (stack.length == 0 || (stack.pop() != matchingOpeningBracket)) {
-          return false
-        }
-      } else {
-        stack.push(ch)
+  let openingBrackets = ['[', '{', '(']
+  let closingBrackets = [']', '}', ')']
+
+  for (let i = 0; i < brackets.length; i++) {
+    ch = brackets[i]
+
+    if (closingBrackets.indexOf(ch) > -1) {
+      matchingOpeningBracket = openingBrackets[closingBrackets.indexOf(ch)]
+      if (stack.length === 0 || (stack.pop() !== matchingOpeningBracket)) {
+        return false
       }
+    } else {
+      stack.push(ch)
     }
-  
-    return (stack.length == 0)
-  };
-  
-  console.log(isValid("{{{{()}}})){[}]")) // false
-  
+  }
+  return (stack.length === 0)
+}
+
+module.exports = {
+  isValid
+}
+
+console.log(isValid('{}'))

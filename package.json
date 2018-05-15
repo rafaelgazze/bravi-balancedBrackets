@@ -1,0 +1,39 @@
+{
+  "name": "bravi-balancedbrackets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint index.js --ext .js --ext .json --fix",
+    "cover": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelgazze/bravi-balancedBrackets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelgazze/bravi-balancedBrackets/issues"
+  },
+  "homepage": "https://github.com/rafaelgazze/bravi-balancedBrackets#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.3.1",
+    "eslint-watch": "^2.1.14",
+    "lint": "^1.1.2",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
+    "sinon": "^5.0.7",
+    "sinon-chai": "^3.0.0"
+  }
+}
